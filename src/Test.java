@@ -10,21 +10,21 @@ public class Test {
 	}
 	
     int getMidIndex(int[] nums,int low,int high){
-        int tmp=nums[low];//选中轴
+        int tmp=nums[low];//?????
         while(low<high){
-           while(low<high&&nums[high]>=tmp){//找到第一个比temp小的nums[high]退出while,
+           while(low<high&&nums[high]>=tmp){//??????????temp小??nums[high]???while,
               high--;
            }
            nums[low]=nums[high];
             
-           while(low<high&&nums[low]<tmp){//找到第一个比temp大的nums[low]退出while
+           while(low<high&&nums[low]<tmp){//??????????temp???nums[low]???while
               low++;
            }
            nums[high]=nums[low];
         }
                    
-       nums[low]=tmp;// 中轴元素归位,
-	return low; // 返回中轴的位置
+       nums[low]=tmp;// ????????位,
+	return low; // ?????????位??
     }
      
     void quickSort(int[] nums,int low,int high){
