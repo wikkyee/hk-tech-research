@@ -10,21 +10,21 @@ public class Test {
 	}
 	
     int getMidIndex(int[] nums,int low,int high){
-        int tmp=nums[low];//?????
+        int tmp=nums[low];
         while(low<high){
-           while(low<high&&nums[high]>=tmp){//??????????tempС??nums[high]???while,
+           while(low<high&&nums[high]>=tmp){
               high--;
            }
            nums[low]=nums[high];
             
-           while(low<high&&nums[low]<tmp){//??????????temp???nums[low]???while
+           while(low<high&&nums[low]<tmp){
               low++;
            }
            nums[high]=nums[low];
         }
                    
-       nums[low]=tmp;// ????????λ,
-	return low; // ?????????λ??
+       nums[low]=tmp;
+	return low;
     }
      
     void quickSort(int[] nums,int low,int high){
